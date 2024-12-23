@@ -4,7 +4,7 @@ class Docker implements Serializable {
     
     def script
 
-    Docker (script) {
+    Docker(script) {
         this.script = script
     }
 
@@ -15,7 +15,7 @@ class Docker implements Serializable {
                 docker build -t ${imageName} .
                 echo "\${PASS}" | docker login \${USER} --password-stdin 
                 docker push ${imageName}
+            """
         }
     }
 }
-
